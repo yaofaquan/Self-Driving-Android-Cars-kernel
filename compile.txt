@@ -1,0 +1,32 @@
+How to compile kernel and pack boot.img:
+
+1.Download Android source code
+  checkout hikey-linaro in $AOSP_ROOT
+
+2.git clone https://android.googlesource.com/kernel/hikey-linaro
+  cd hikey-linaro
+  git checkout -b android-hikey-linaro-4.9 origin/android-hikey-linaro-4.9
+
+3.build kernel in hikey-linaro with:
+
+  note-- Maybe you should first:
+      -- cd $AOSP_ROOT
+      -- source ./build/envsetup.sh
+      -- lunch hikey960-userdebug
+
+  make ARCH=arm64 hikey960_defconfig
+  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- -j24
+
+4.copy new generated files to AOSP related path($AOSP_ROOT/device/linaro/hikey-kernel) to update the default ones
+
+  cp $AOSP_ROOT/hikey-linaro/arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dtb $AOSP_ROOT/device/linaro/hikey-kernel/hi3660-hikey960.dtb-4.9
+  cp $AOSP_ROOT/hikey-linaro/arch/arm64/boot/Image.gz-dtb $AOSP_ROOT/Image.gz-dtb-hikey960-4.9
+
+5.make a full AOSP build and generate kernel image
+
+  cd $AOSP_ROOT
+  source ./build/envsetup.sh
+  lunch hikey960-userdebug
+  //make -j24
+  //export TARGET_KERNEL_USE=4.14
+  make bootimage -j24
