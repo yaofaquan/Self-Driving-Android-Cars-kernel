@@ -14,8 +14,10 @@ How to compile kernel and pack boot.img:
       -- source ./build/envsetup.sh
       -- lunch hikey960-userdebug
 
-  make ARCH=arm64 hikey960_defconfig
-  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- -j24
+  export ARCH=arm64
+  export CROSS_COMPILE=aarch64-linux-android-
+  make hikey_defconfig
+  make -j4
 
 4.copy new generated files to AOSP related path($AOSP_ROOT/device/linaro/hikey-kernel) to update the default ones
 
