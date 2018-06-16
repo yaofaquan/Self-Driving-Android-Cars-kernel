@@ -14,6 +14,7 @@ How to compile kernel and pack boot.img:
       -- source ./build/envsetup.sh
       -- lunch hikey960-userdebug
 
+  //切換到kernel根目錄
   export ARCH=arm64
   export CROSS_COMPILE=aarch64-linux-android-
   make hikey_defconfig
