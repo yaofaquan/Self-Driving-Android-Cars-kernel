@@ -1,0 +1,8 @@
+如何使用串口調試hikey960:
+http://www.smartfire.cn/thread-741-1-1.html
+如何使用minicom獲取串口log:
+https://blog.csdn.net/u013398960/article/details/72967892
+如何使用cutecom獲取串口log:
+https://blog.csdn.net/zhaoqi2617/article/details/72238546
+如何打開Android串口log:
+https://blog.csdn.net/y_lang/article/details/46989801
