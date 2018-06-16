@@ -11,3 +11,5 @@ http://wiki.lemaker.org/HiKey(LeMaker_version):UART
 https://njiot.blogspot.com/2017/07/hikey-960-1-uart.html
 96boards usb轉串口硬件:
 https://www.96boards.org/product/uartserial/
+usb-ttl和芯片的鏈接方法:
+https://blog.csdn.net/qq_30668481/article/details/78483032
