@@ -6,3 +6,8 @@ https://blog.csdn.net/u013398960/article/details/72967892
 https://blog.csdn.net/zhaoqi2617/article/details/72238546
 如何打開Android串口log:
 https://blog.csdn.net/y_lang/article/details/46989801
+hikey開發板串口鏈接:
+http://wiki.lemaker.org/HiKey(LeMaker_version):UART
+https://njiot.blogspot.com/2017/07/hikey-960-1-uart.html
+96boards usb轉串口硬件:
+https://www.96boards.org/product/uartserial/
