@@ -13,3 +13,5 @@ https://njiot.blogspot.com/2017/07/hikey-960-1-uart.html
 https://www.96boards.org/product/uartserial/
 usb-ttl和芯片的鏈接方法:
 https://blog.csdn.net/qq_30668481/article/details/78483032
+android 8.1 關閉jack編譯
+make ANDROID_COMPILE_WITH_JACK:=false
