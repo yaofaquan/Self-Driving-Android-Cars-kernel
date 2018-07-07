@@ -20,6 +20,15 @@ How to compile kernel and pack boot.img:
   make hikey_defconfig
   make -j4
 
+  #    kernel-4.4
+  #    DTC     arch/arm64/boot/dts/hisilicon/hi6220-hikey.dtb
+  #    CAT     arch/arm64/boot/Image.gz-dtb
+
+  #    kernel-4.9
+  #    OBJCOPY arch/arm64/boot/Image
+  #    DTC     arch/arm64/boot/dts/hisilicon/hi6220-hikey.dtb
+  #    GZIP    arch/arm64/boot/Image.gz
+
 4.copy new generated files to AOSP related path($AOSP_ROOT/device/linaro/hikey-kernel) to update the default ones
 
   cp $AOSP_ROOT/hikey-linaro/arch/arm64/boot/dts/hisilicon/hi3660-hikey960.dtb $AOSP_ROOT/device/linaro/hikey-kernel/hi3660-hikey960.dtb-4.9
